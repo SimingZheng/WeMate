@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="../css/complete_profile.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <style>
+    </style>
+</head>
+<body>
+<div class="input">
+    <form action="../php/complete_profile.php" method="post" enctype="multipart/form-data">
+        <div class="photo">
+            <!-- only jpg，gif,png -->
+            <div style="text-align: top">
+                <img class="portrait" id="upload" src="../assets/images/portrait.png"/>
+                <p class="p2">Click below to choose photo </br> (jpg, gif ,png &nbsp;&nbsp;400px * 300px size<400KB)</p>
+                <div class="choose_photo_p"><input style="opacity: 0;" class="choose_photo" name="image" id="upload-input" onchange="showImg(this)"
+                                     type="file"  value="Click"/></div>
+            </div>
+        </div>
+        <p class="p1">Gender <select class="gender" name="gender">
+            <option value ="Male">Male</option><option value ="FeMale">FeMale</option><option value="MtF">Male to Female (MtF)</option>
+            <option value="FtM">Female to Male (FtM)</option><option value="Binary">Binary</option><option value="Non-Binary">Non-Binary</option>
+            <option value="Trans Woman">Trans Woman</option><option value="Trans Man">Trans Man</option>
+        </select></p>
+        <p class="p2">Seeking <select class="seeking" name="seeking">
+            <option value ="Male">Male</option><option value ="FeMale">FeMale</option><option value="MtF">Male to Female (MtF)</option>
+            <option value="FtM">Female to Male (FtM)</option><option value="Binary">Binary</option><option value="Non-Binary">Non-Binary</option>
+            <option value="Trans Woman">Trans Woman</option><option value="Trans Man">Trans Man</option></select></p>
+        <p class="p2">(age > 19) <input pattern="/1[89]|[2-9][0-9]|100/" required maxlength="3"  class="age" type="text" name="age" placeholder="age"></p>
+        <p class="p3"><input class="smoker" type="checkbox" name="smoker" value="smoker"/> Smoker
+            <input class="drinker" type="checkbox" name="drinker" value="drinker"/>Drinker</p>
+        <p class="p2"><textarea class="description" type="text" name="description" placeholder="description"></textarea></p>
+
+        <section class="aui-flexView" >
+            <section class="aui-scrollView">
+                <div class="aui-ui-choose">
+                    <select class="ui-choose" multiple="multiple" id="uc_03" name="interests[]">
+                        <option>literature</option><option>Family Time</option><option>Exercise</option><option>Gaming</option>
+                        <option>Traveling</option><option>Music</option><option>Photography</option><option>Shopping</option>
+                        <option>Sleeping</option><option>Church Activities</option><option>Crafts</option><option>Sports</option>
+                        <option>Movie</option><option>Animal</option><option>Dancing</option><option>Camping</option>
+                        <option>Car</option><option>Food</option><option>Technology</option><option>Drawing</option>
+                        <option>Animation</option><option>Writing</option><option>Magic</option><option>Baking</option>
+                        <option>Puzzles</option><option>Astronomy</option><option>Volunteering</option>
+                    </select>
+                </div>
+            </section>
+        </section>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="../js/aui-choose.js"></script>
+        <script type="text/javascript">
+
+            $('input[type=file]').each(function()
+            {
+                var max_size=409600;
+                $(this).change(function(evt)
+                {
+                    var finput = $(this);
+                    var files = evt.target.files;
+                    var output = [];
+                    for (var i = 0, f; f = files[i]; i++)
+                    {
+                        if(f.size > max_size)
+                        {
+                            alert("image cannot bigger than 400KB!");
+                            $(this).val('');
+                        }
+                    }
+                });
+            });
+
+            function showImg(input) {
+
+                var file = input.files[0];
+                var reader = new FileReader()
+                reader.onload = function(e) {
+                    document.getElementById('upload').src=e.target.result
+                }
+                reader.readAsDataURL(file)
+            }
+
+            $('.ui-choose').ui_choose();
+            var uc_03 = $('#uc_03').data('ui-choose');
+            uc_03.click = function (index, item) {
+                console.log('click', index);
+            };
+            uc_03.change = function (index, item) {
+                console.log('change', index);
+            };
+        </script>
+
+        <p class="p2"><input class="input5" type="submit" name="submit" value="Store"></p>
+        <div class="a1"><a href="index.html">out</a></div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+.clearfix:after{
+  content:"";
+  display:block;
+  height:0;
+  width:100%;
+  clear:both;
+  visibility: hidden;
+}
+
+  .loadMore{
+    position: relative;
+    height: 0.8rem;
+  }
+  .loadMore .loading{
+    position: absolute;
+    top: 0.02rem;
+    left: 4.9rem;
+  }
+  .loadMoreHide{
+    display: none;
+  }
+  .hide{
+    display: none;
+  }
+  .fl{
+    float: left;
+  }
+  .fr{
+    float: right;
+  }

@@ -1,0 +1,219 @@
+@media screen and (min-width: 800px) {
+    .top {
+        background: linear-gradient(to left, #FF6347, lightsalmon);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        box-shadow: 0px 1px 8px 2px #999;
+    }
+    .portrait {
+        border: 5px solid whitesmoke;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 3px 3px 5px #999;
+    }
+    .name {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+        float: left;
+        font-size: 50px;
+    }
+    .top .sign_in {
+        font-size: 25px;
+        font-family: Times New Roman;
+        padding-right: 50px;
+        text-decoration: none;
+        color: #1E90FF;
+    }
+}
+@media screen and (max-width: 800px) {
+    .top {
+        background: linear-gradient(to left, #FF6347, lightsalmon);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        box-shadow: 0px 1px 8px 2px #999;
+    }
+    .middle {
+        padding-left: 5%;
+        width: 20%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+    }
+    .portrait {
+        border: 5px solid whitesmoke;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        float: left;
+        overflow: hidden;
+        box-shadow: 3px 3px 5px #999;
+    }
+    .name {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+        font-size: 20px;
+    }
+}
+.body{
+    background-color: #EEE9E9;
+    padding-left: 20%;
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+.basic ,.profile{
+    color: darksalmon;
+    margin-top: 20px;
+    font-family: Times New Roman;
+    font-size: 40px;
+}
+.li_basic,.li_profile{
+    width: 70%;
+    color: #F08A0E;
+    margin-top: 20px;
+    font-family: "Adobe Caslon Pro";
+    font-size: 30px;
+}
+.footer
+{
+    background-color: rgba(132,132,132,0.57);
+    height: 280px;
+}
+.footer .p1
+{
+    font-size: 50px;
+    font-family: Times New Roman;
+    color: rgba(94,94,94,0.75);
+}
+.brand
+{
+    height: 50px;
+    width: 500px;
+    float: right;
+}
+.input{
+    width: 50%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 3px solid #c8cccf;
+    color: #6a6f77;
+    text-align: center;
+}
+.choose_photo_p {
+    text-align: center;
+    margin: 0px auto;
+    width: 50%;
+    height: 30px;
+    border-width: 0px;
+    border-radius: 3px;
+    background: chocolate;
+    cursor: pointer;
+    outline: none;
+    font-family: Microsoft YaHei;
+    color: white;
+    font-size: 17px;
+}
+.choose_photo_p:hover {
+    background-color: coral;
+}
+.photo_edit{
+    margin: 50px 20%;
+    width: 33%;
+}
+@media screen and (min-width: 0px) {
+    .portrait_edit {
+        border: 2px solid red;
+        border-radius: 15px;
+        width: 100px;
+        height: 150px;
+        /*vertical-align: middle;*/
+    }
+}
+@media screen and (min-width: 600px) {
+    .portrait_edit {
+        border: 2px solid red;
+        border-radius: 15px;
+        width: 200px;
+        height: 300px;
+        /*vertical-align: middle;*/
+    }
+}
+@media screen and (min-width: 1200px) {
+    .portrait_edit {
+        border: 2px solid red;
+        border-radius: 15px;
+        width: 300px;
+        height: 400px;
+        /*vertical-align: middle;*/
+    }
+}
+.gender,.age,.seeking{
+    width: 30%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #c8cccf;
+    color: #6a6f77;
+    text-align: center;
+}
+.smoker,.drinker{
+    width: 5%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #c8cccf;
+    color: #6a6f77;
+    text-align: center;
+}
+.description {
+    width: 70%;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 4px solid #c8cccf;
+    color: #6a6f77;
+}
+.p_click{
+    color: #333333;
+    font-weight: bolder;
+    text-align: center;
+}
+.input_store{
+    margin-top: 40px;
+    float: left;
+    margin-left: 10%;
+    width: 50%;
+    height: 40px;
+    border-width: 0px;
+    border-radius: 3px;
+    background: chocolate;
+    cursor: pointer;
+    outline: none;
+    font-family: Microsoft YaHei;
+    color: white;
+    font-size: 17px;
+}
+.input_store:hover{
+    background-color: coral;
+}
+
