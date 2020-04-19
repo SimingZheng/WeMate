@@ -106,7 +106,7 @@
                     <p style="font-family:Times New Roman ;text-align: center ;font-size: 20px ; color: grey ; margin-top: 30px;margin-bottom: 30px">
                         <?php
                         if ($num==1)
-                            echo "0 message";
+                            echo "message";
                         else
                             echo ($num - 1) . " messages";
                         ?>

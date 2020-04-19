@@ -222,7 +222,7 @@ if ($start == 0) {
         <p style="font-family:Times New Roman ;text-align: center ;font-size: 20px ; color: grey ; margin-bottom: 10px" >
             <?php
             if ($num==1)
-                echo "0 Result";
+                echo "Result";
             else
                 echo ($num)." Results";
             ?>
