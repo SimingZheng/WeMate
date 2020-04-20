@@ -29,7 +29,13 @@ body {
         display: flex;
         -webkit-justify-content: center;
         justify-content: center;
-        width: 50%;
+        width: 60%;
+    }
+
+    .interest{
+        margin-left: 10%;
+        font-family: Times New Roman;
+        color: #F0610E;
     }
 
     .right {

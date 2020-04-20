@@ -43,6 +43,20 @@ if (!$result) {
     printf("Error: %s\n", mysqli_error($con));
     exit();
 }
+$temp_x=$_POST['interests'];
+$sql_interest_delete = "delete from interests where user_ID = '$ID' ";
+$result_interest_delete = mysqli_query($con, $sql_interest_delete);
+for($i=0;$i<count($temp_x);$i++){
+    if($temp_x[$i]!=""){
+        $sql_interest = "select interest_ID from interest_type where interest = '$temp_x[$i]' ";
+        $result_interest = mysqli_query($con, $sql_interest);
+        $interest= $result_interest->fetch_assoc();
+        $str = implode($interest);
+        $q_interest = "insert into interests(user_ID,interest_ID) values ('$ID','$str')";
+        $result2 = mysqli_query($con, $q_interest);
+    }
+}
+
 $rows = mysqli_num_rows($result);
 
 $q_profile = "UPDATE profile SET user_ID ='$ID',gender='$gender',age='$age',smoker='$smoker',
@@ -53,6 +67,7 @@ $result_profile = mysqli_query($con, $q_profile);
 $q_users = "UPDATE users SET  email = '$email', password = '$password', firstname = '$firstname' , lastname = '$lastname',
                 handle = '$handle' WHERE user_ID = '$ID'";
 $result_users = mysqli_query($con, $q_users);
+
 //$temp_x=$_POST['interests'];
 //for($i=0;$i<count($temp_x);$i++){
 //    if($temp_x[$i]!=""){

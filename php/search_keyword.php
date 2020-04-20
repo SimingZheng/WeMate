@@ -136,6 +136,10 @@ if ($start == 0) {
                 evt.preventDefault();
             }
         </script>
+        <p class="interest"><span style="font-weight: bold">Interest : </span>
+            Animal, Animation, Astronomy, Baking, Camping, Car, Church, Activities, Crafts, Dancing, Drawing, Exercise, Family, Time
+            Food, Gaming, literature, Magic, Movie, Music, Photography, Puzzles, Shopping, Sleeping, Sports, Technology,
+            Traveling, Volunteering, Writing</p>
         <!--        <div class="form">-->
         <!--            <form action="admin_search_user.php" method="post">-->
         <!--                <input class="search" results="s" type="search" name="keywords">-->
@@ -454,9 +458,7 @@ if ($start == 0) {
 </script>
 <div class="footer">
     <div class="introduction"><p>Note: Search result - Show object results filtered by user's interest, age and gender<br/>
-            Interests: Animal, Animation, Astronomy, Baking, Camping, Car, Church, Activities, Crafts, Dancing, Drawing, Exercise, Family, Time
-            Food, Gaming, literature, Magic, Movie, Music, Photography, Puzzles, Shopping, Sleeping, Sports, Technology,
-            Traveling, Volunteering, Writing</p></div>
+        </p></div>
     <div class="brand">
         <p class="p1">WeMate |</p>
     </div>
