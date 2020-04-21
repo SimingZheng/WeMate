@@ -103,14 +103,14 @@ background-size:100% 100%;background-attachment: fixed;"
       text="#68228B" onload="setInterval('clock()',1000)">
 <div class="input">
     <form action="../php/signup.php" method="post">
-        <p class="p1"><input class="input1" type="text" name="firstname" maxlength="20"  placeholder="First name"></p>
-        <p class="p4"><input class="input1" type="text" name="lastname" maxlength="20"  placeholder="Last name"></p>
+        <p class="p1"><input class="input1" type="text" name="firstname" maxlength="20"  placeholder="First name" onkeyup="this.value=this.value.replace(/\s+/g,'')"></p>
+        <p class="p4"><input class="input1" type="text" name="lastname" maxlength="20"  placeholder="Last name" onkeyup="this.value=this.value.replace(/\s+/g,'')"></p>
         <p class="p4"><input type="email" required class="input4" type="text" name="email" maxlength="50"  placeholder="email"
                              οnclick="email.value='',email.id='useremail1'"
-                             οnblur="isEmail(this.value)"/></p>
-        <p class="p2"><input  class="input2" type="password" name="password1"  maxlength="30" placeholder="Password"/></p>
-        <p class="p3"><input class="input3" type="password" name="password2" maxlength="30" placeholder="Confirm password"></p>
-        <p class="p3"><input class="input4" type="text" name="handle" maxlength="10"  placeholder="Nickname"></p>
+                             οnblur="isEmail(this.value)" onkeyup="this.value=this.value.replace(/\s+/g,'')"></p>
+        <p class="p2"><input  class="input2" type="password" name="password1"  maxlength="30" placeholder="Password" onkeyup="this.value=this.value.replace(/\s+/g,'')"/></p>
+        <p class="p3"><input class="input3" type="password" name="password2" maxlength="30" placeholder="Confirm password"onkeyup="this.value=this.value.replace(/\s+/g,'')"></p>
+        <p class="p3"><input class="input4" type="text" name="handle" maxlength="10"  placeholder="Nickname"onkeyup="this.value=this.value.replace(/\s+/g,'')"></p>
         <p class="p5"><input class="input5" type="submit" name="submit" value="Sign up"></p>
         <div class="a1"><a href="index.html">Go sign in</a></div>
     </form>

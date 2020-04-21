@@ -128,7 +128,8 @@ $sum = 0;
                 <li class="li_basic">First name:&nbsp;&nbsp;&nbsp;<input maxlength="30" class="input" type="text"
                                                                          name="firstname" onchange="firstname(this)"
                                                                          placeholder="<?php echo "  {$row_user['firstname']}" ?> "
-                                                                         value="<?php echo "{$row_user['firstname']}" ?>">
+                                                                         value="<?php echo "{$row_user['firstname']}" ?>"
+                    onkeyup="this.value=this.value.replace(/\s+/g,'')">
                 </li>
                 <script type="text/javascript">
                     function firstname(obj) {
@@ -140,7 +141,8 @@ $sum = 0;
                 <li class="li_basic">Last name: &nbsp;&nbsp;<input maxlength="30" class="input" type="text"
                                                                    name="lastname"
                                                                    placeholder="<?php echo " {$row_user['lastname']}" ?>"
-                                                                   value="<?php echo "{$row_user['lastname']}" ?>"></li>
+                                                                   value="<?php echo "{$row_user['lastname']}" ?>"
+                    onkeyup="this.value=this.value.replace(/\s+/g,'')"></li>
                 <li class="li_basic">E-mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input maxlength="50"
                                                                                                     type="email"
                                                                                                     required
@@ -148,15 +150,18 @@ $sum = 0;
                                                                                                     type="text"
                                                                                                     name="email"
                                                                                                     placeholder=" <?php echo " {$row_user['email']}" ?>"
-                                                                                                    value="<?php echo "{$row_user['email']}" ?>">
+                                                                                                    value="<?php echo "{$row_user['email']}" ?>"
+                    onkeyup="this.value=this.value.replace(/\s+/g,'')">
                 </li>
                 <li class="li_basic">Nickname: &nbsp; <input maxlength="30" class="input" type="text" name="handle"
                                                              placeholder="<?php echo "{$row_user['handle']}" ?>"
-                                                             value="<?php echo "{$row_user['handle']}" ?>"></li>
+                                                             value="<?php echo "{$row_user['handle']}" ?>"
+                        onkeyup="this.value=this.value.replace(/\s+/g,'')"></li>
                 <li class="li_basic">Password: &nbsp; &nbsp;&nbsp;<input maxlength="30" class="input" type="text"
                                                                          name="password"
                                                                          placeholder="new password"
-                                                                         value="<?php echo "{$row_user['password']}" ?>">
+                                                                         value="<?php echo "{$row_user['password']}" ?>"
+                    onkeyup="this.value=this.value.replace(/\s+/g,'')">
                 </li>
             </ul>
             <p class="profile">Detail Information</p>
@@ -205,10 +210,11 @@ $sum = 0;
                         }
                     </script>
                 </li>
-                <li class="li_profile">Age: &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="li_profile" >Age (20-99): &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input pattern="/1[89]|[2-9][0-9]|100/" required maxlength="3" class="input" type="text" name="age"
                            value="<?php echo "{$row_profile['age']}" ?>"
-                           placeholder="<?php echo "{$row_profile['age']}" ?>"></li>
+                           placeholder="<?php echo "{$row_profile['age']}" ?>"
+                            onkeyup="this.value=this.value.replace(/\s+/g,'')"></li>
                 <li class="li_profile">
                     Smoker:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <input class="smoker" type="checkbox" name="smoker"
                                                                   value="smoker"/>

@@ -28,11 +28,12 @@
             <option value ="Male">Male</option><option value ="FeMale">FeMale</option><option value="MtF">Male to Female (MtF)</option>
             <option value="FtM">Female to Male (FtM)</option><option value="Binary">Binary</option><option value="Non-Binary">Non-Binary</option>
             <option value="Trans Woman">Trans Woman</option><option value="Trans Man">Trans Man</option></select></p>
-        <p class="p2">(age > 19) <input pattern="/1[89]|[2-9][0-9]|100/" required maxlength="3"  class="age" type="text" name="age" placeholder="age"></p>
+        <p class="p2">age (20-99) <input pattern="/1[89]|[2-9][0-9]|100/" required maxlength="3"  class="age" type="text" name="age" placeholder="age"
+                                        onkeyup="this.value=this.value.replace(/\s+/g,'')"></p>
         <p class="p3"><input class="smoker" type="checkbox" name="smoker" value="smoker"/> Smoker
             <input class="drinker" type="checkbox" name="drinker" value="drinker"/>Drinker</p>
         <p class="p2"><textarea class="description" type="text" name="description" placeholder="description"></textarea></p>
-
+        <p class="p2">Choose your interests below</p>
         <section class="aui-flexView" >
             <section class="aui-scrollView">
                 <div class="aui-ui-choose">
