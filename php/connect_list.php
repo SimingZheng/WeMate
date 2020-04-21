@@ -270,6 +270,9 @@ if ($start == 0) {
                     <a onclick="transfer()"  class="info">
                         <span class="glyphicon glyphicon-list info_icon"></span>
                     </a>
+                    <a onclick="delete_conn()" class="delete">
+                        <span class="glyphicon glyphicon-remove delete_icon"></span>
+                    </a>
                     <a onclick="like()" class="like">
                         <span class="glyphicon glyphicon-send like_icon"></span>
                     </a>
@@ -279,6 +282,20 @@ if ($start == 0) {
                             document.cookie = "user_profile_id ="+user_profile_id;
                             // localStorage.setItem("user_profile_id",user_profile_id);
                             window.location.href="user_profile.php";
+                        }
+
+                        function delete_conn(){
+                            var receiver_id = "<?php echo $str ?>";
+                            var sender_id = "<?php echo $ID ?>";
+                            var backpage = "homepage.php";
+                            //if("<?php //echo $start?>//") {
+                            //    var start = "<?php //echo $start ?>//";
+                            //    document.cookie = "start ="+start;
+                            //}
+                            document.cookie = "backpage ="+ backpage;
+                            document.cookie = "delete_receiver_id ="+receiver_id;
+                            document.cookie = "delete_sender_id ="+sender_id;
+                            window.location.href="delete_conn.php";
                         }
 
                         function like(){

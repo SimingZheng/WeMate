@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../css/button_style.css">
     <link rel="stylesheet" type="text/css" href="../css/admin_message.css">
     <meta charset="UTF-8">
-    <title>Admin messages management</title>
+    <title>Admin connection management</title>
     <style>
     </style>
 </head>
@@ -32,16 +32,7 @@
 <div class="top">
     <div class="left">
         <p class="p1">WeMate |</p>
-        <p class="p2">message management</p>
-    </div>
-    <div class="middle">
-        <!--        <div class="magnifier"><i></i></div>-->
-        <div class="r">
-            <form action="admin_search_messages.php" method="post">
-                <input class="in" results="s" type="search" name="keywords">
-                <input class="btn btn-small btn-blue btn-radius" type="submit" value="Search messages">
-            </form>
-        </div>
+        <p class="p2">connection management</p>
     </div>
     <div class="right">
         <?php
@@ -89,7 +80,7 @@
                     $start = $_GET["start"];
                 }
                 $end = $start + PAGE_SIZE - 1;
-                $sql = "select * from messages";
+                $sql = "select * from connections";
                 $result = mysqli_query($con, $sql);
                 $result1 = mysqli_query($con, $sql);
                 if (!$result)
@@ -103,13 +94,13 @@
                     $num = $_COOKIE['num'];
                 ?>
                 <div class="Top2">
-                    <p class="Top3">Users Messages Management</p>
+                    <p class="Top3">Users Connections Management</p>
                     <p style="font-family:Times New Roman ;text-align: center ;font-size: 20px ; color: grey ; margin-top: 30px;margin-bottom: 30px">
                         <?php
                         if ($num==1)
-                            echo "message";
+                            echo "connection";
                         else
-                            echo ($num - 1) . " messages";
+                            echo ($num - 1) . " connections";
                         ?>
                     </p>
                 </div>
@@ -122,38 +113,44 @@
                     }
                     for (; $i <= $end; $i++) {
                         $row = mysqli_fetch_assoc($result);
-                        if ($row['message_ID'] != null) {
-                            $sender_ID = $row['sender_ID'];
-                            $receiver_ID = $row['receiver_ID'];
-                            $sql_sender = "select * from users where user_ID = '$sender_ID'";
-                            $result_sender = mysqli_query($con, $sql_sender);
-                            $sender = $result_sender->fetch_assoc();
-                            $sql_receiver = "select * from users where user_ID = '$receiver_ID'";
-                            $result_receiver = mysqli_query($con, $sql_receiver);
-                            $receiver = $result_receiver->fetch_assoc();
+                        if ($row['user_ID1'] != null) {
+                            $user_ID1 = $row['user_ID1'];
+                            $user_ID2 = $row['user_ID2'];
+                            $sql_user1 = "select * from users where user_ID = '$user_ID1'";
+                            $result_user_ID1 = mysqli_query($con, $sql_user1);
+                            $user1 = $result_user_ID1->fetch_assoc();
+                            $sql_user2 = "select * from users where user_ID = '$user_ID2'";
+                            $result_user_ID2 = mysqli_query($con, $sql_user2);
+                            $user2 = $result_user_ID2->fetch_assoc();
                             ?>
                             <div class="results">
                                 <div class="div">
                                     <font size="5px" color="blue" style=" font-style: italic">
-                                        Sender Name: <p
-                                                style="color: #0c5460"> <?= $sender['firstname']; ?> <?= $sender['lastname']; ?> </p>
+                                         Name: <p
+                                            style="color: #0c5460"> <?= $user1['firstname']; ?> <?= $user1['lastname']; ?> </p>
                                     </font>
                                     <font size="5px" color="blue" style=" font-style: italic">
-                                        Receiver Name: <p
-                                            style="color: #0c5460"> <?= $receiver['firstname']; ?> <?= $receiver['lastname']; ?> </p>
+                                         Name: <p
+                                            style="color: #0c5460"> <?= $user2['firstname']; ?> <?= $user2['lastname']; ?> </p>
                                     </font>
                                     <font size="5px" color="blue" style=" font-style: italic">
-                                        Message: <p style="color: #0c5460"><?= $row['message']; ?><br/></p></font>
-                                    <p style="margin-top: 20px;text-align: right;margin-right: 100px">
-                                        Time: <?= $row['time']; ?></p>
-                                    <button onclick="Delete(this)" class="info" value="<?php echo $row['message_ID'] ?>">
+                                        connection time: <p style="color: #0c5460"><?= $row['connect_date']; ?><br/></p></font>
+                                    <button onclick="delete_conn()" class="info" value="">
                                         <span class="glyphicon glyphicon-trash info_icon"></span>
                                     </button>
                                     <script>
-                                        function Delete(value) {
-                                            var ban = value.value;
-                                            document.cookie = "delete ="+ban;
-                                            window.location.href="delete_message.php";
+                                        function delete_conn(){
+                                            var receiver_id = "<?php echo $user_ID1 ?>";
+                                            var sender_id = "<?php echo $user_ID2 ?>";
+                                            var backpage = "homepage.php";
+                                            //if("<?php //echo $start?>//") {
+                                            //    var start = "<?php //echo $start ?>//";
+                                            //    document.cookie = "start ="+start;
+                                            //}
+                                            document.cookie = "backpage ="+ backpage;
+                                            document.cookie = "delete_receiver_id ="+receiver_id;
+                                            document.cookie = "delete_sender_id ="+sender_id;
+                                            window.location.href="delete_conn_admin.php";
                                         }
                                     </script>
                                 </div>

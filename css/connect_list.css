@@ -370,6 +370,20 @@ body {
         opacity: 0.8;
     }
 
+    .delete{
+        position: absolute;
+        left: 40%;
+        bottom: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: whitesmoke;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 3px 3px 5px #999;
+        opacity: 0.8;
+    }
+
     .previous_circle {
         z-index: 99999;
         position: absolute;
@@ -408,8 +422,22 @@ body {
         position: absolute;
         left: 10px;
         bottom: 10px;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
+        background-color: whitesmoke;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 3px 3px 5px #999;
+        opacity: 0.8;
+    }
+
+    .delete {
+        position: absolute;
+        left: 38%;
+        bottom: 10px;
+        width: 80px;
+        height: 80px;
         background-color: whitesmoke;
         color: #FFF;
         border-radius: 50px;
@@ -496,6 +524,14 @@ body {
         margin-top: 10%;
         margin-right: 8%;
     }
+    .delete_icon{
+        background: -webkit-linear-gradient(#F0610E, lightsalmon);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 40px;
+        margin-top: 10%;
+        margin-right: 3%;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -503,8 +539,8 @@ body {
         position: absolute;
         right: 10px;
         bottom: 10px;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         background-color: whitesmoke;
         color: #FFF;
         border-radius: 50px;
@@ -536,16 +572,24 @@ body {
     }
 
     .like_icon {
-        background: -webkit-linear-gradient(#F0610E, lightsalmon);
+        background: -webkit-linear-gradient(#E066FF, #E0E0E0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 60px;
+        font-size: 50px;
         margin-top: 20%;
         margin-right: 4%;
     }
+    .delete_icon{
+        background: -webkit-linear-gradient(#F0610E, lightsalmon);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 50px;
+        margin-top: 20%;
+        margin-right: 3%;
+    }
 }
 
-.like:hover, .info:hover, .previous_circle:hover, .next_circle:hover{
+.like:hover, .info:hover, .previous_circle:hover,.delete:hover, .next_circle:hover{
     background-color: #CDBA96;
 }
 

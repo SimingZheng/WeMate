@@ -33,7 +33,7 @@ while ($row_num = $result_num->fetch_assoc()) {
     <div class="middle">
         <?php
 //        if (!empty($row_user['firstname'])) {
-        echo '<a href="profile.php" >
+        echo '<a href="" >
             <img class="portrait" src="data:image/jpeg;base64,' . base64_encode($row_profile['photo']) . '"  alt=""/></a>';
         ?>
         <p class="name"><?php echo $row_user['firstname'] ?></p>

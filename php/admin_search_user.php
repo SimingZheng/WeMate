@@ -66,6 +66,7 @@
 <div class="nav">
     <a href="admin_user.php">User management</a>
     <a href="admin_message.php">User message management</a>
+    <a href="admin_connection.php">User connection management</a>
 </div>
 <div class="container">
     <div class="body">
