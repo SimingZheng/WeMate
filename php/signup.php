@@ -117,7 +117,7 @@ if (!$result) {
 <p class="p">Succeed !</p>
 <div>
     <p class="p1"><input type="button"
-                         onclick=" window.location.href='../html/index.html' "
+                         onclick=" window.location.href='../html/login.html' "
                          value="Back to sign in"/></p>
 </div>
 </body>

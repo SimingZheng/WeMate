@@ -55,7 +55,7 @@ else {
 <?php
 echo "
                     <script>
-                            setTimeout(function(){window.location.href='../html/index.html';},3000);
+                            setTimeout(function(){window.location.href='../html/login.html';},3000);
                     </script>
                 ";
 }
@@ -111,7 +111,7 @@ if ($row) {
 <?php
 echo "
                     <script>
-                            setTimeout(function(){window.location.href='../html/index.html';},3000);
+                            setTimeout(function(){window.location.href='../html/login.html';},3000);
                     </script>
                 ";
     }
@@ -147,7 +147,7 @@ else {
 <?php
 echo "
                     <script>
-                            setTimeout(function(){window.location.href='../html/index.html';},3000);
+                            setTimeout(function(){window.location.href='../html/login.html';},3000);
                     </script>
                 ";
 }
@@ -183,7 +183,7 @@ echo "
 <?php
 echo "
                     <script>
-                            setTimeout(function(){window.location.href='../html/index.html';},3000);
+                            setTimeout(function(){window.location.href='../html/login.html';},3000);
                     </script>
                 ";
 }
@@ -219,7 +219,7 @@ else{
 <?php
 echo "
                       <script>
-                            setTimeout(function(){window.location.href='../html/index.html';},3000);
+                            setTimeout(function(){window.location.href='../html/login.html';},3000);
                       </script>";
 }
 ?>

@@ -45,7 +45,7 @@ $result_chat_4 = mysqli_query($con, $sql_chat);
             <?php
         } else {
             ?>
-            <a class="sign_in" href="../html/index.html">Sign in</a>
+            <a class="sign_in" href="../html/login.html">Sign in</a>
             <?php
         }
         ?>
@@ -70,7 +70,7 @@ $result_chat_4 = mysqli_query($con, $sql_chat);
                             for (var i = keys.length; i--;)
                                 document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
                         }
-                        window.location.href = "../html/index.html";
+                        window.location.href = "../html/login.html";
                     }
                 </script>
             </a>
@@ -199,20 +199,19 @@ $result_chat_4 = mysqli_query($con, $sql_chat);
                 </ul>
             </div>
         </div>
-        <div class="footer"><textarea id="text" maxlength="800" rows="5" cols="40"
+        <div class="footer">
+            <form name="message" action="../php/chat_storage.php" method="post" >
+                <textarea id="text" name="message" maxlength="800" rows="5" cols="40"
                                       style="width: 100%; resize: none; border: none; "
-                                      placeholder="input..."></textarea>
-            <button class="sendbtn" onclick="submit()">Send</button>
+                                      placeholder="input..."> </textarea>
+            <button class="sendbtn" type="submit" name="submit">Send</button>
+            </form>
             <script>
-                function submit() {
-                    var text = document.getElementById('text').value;
-                    var receiver_id = "<?php echo $user ?>";
-                    var sender_id = "<?php echo $ID ?>";
-                    document.cookie = "text =" + text;
-                    document.cookie = "receiver_ID =" + receiver_id;
-                    document.cookie = "sender_ID =" + sender_id;
-                    window.location.href = "chat_storage.php";
-                }
+                // function submit() {
+                //     var text = document.getElementById('text').value;
+                //     document.cookie = "text =" + text;
+                //     window.location.href = "chat_storage.php";
+                // }
             </script>
         </div>
     </div>

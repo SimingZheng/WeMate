@@ -40,11 +40,11 @@
             ?>
             <p class="welcome">Welcome</p>
             <p class="name"><?php echo $_COOKIE['firstname'] ?></p>
-            <a class="sign_out" onclick="Delete()" href="../html/index.html">Sign out</a>
+            <a class="sign_out" onclick="Delete()" href="../html/signin.html">Sign out</a>
             <?php
         } else {
             ?>
-            <a class="sign_in" href="../html/index.html">Sign in</a>
+            <a class="sign_in" href="../html/login.html">Sign in</a>
             <?php
         }
         ?>
@@ -65,7 +65,7 @@
                 Please Sign in <br/></p>
             <p style=" text-align: center;margin-top: 120px"><input class="btn btn-large btn-blue btn-radius"
                                                                     type="button"
-                                                                    onclick=" window.location.href='../html/index.html' "
+                                                                    onclick=" window.location.href='../html/login.html' "
                                                                     value="Sign in"/></p>
             <?php
         } else {
@@ -165,14 +165,14 @@
                     if ($start > 0) {
                         ?>
                         <a style="text-decoration: none ; font-size: 50px ; font-weight: bolder"
-                           href="admin_message.php?start=<?php echo $start - PAGE_SIZE ?>"><<</a>
+                           href="admin_connection.php?start=<?php echo $start - PAGE_SIZE ?>"><<</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <?php
                     }
                     if ($start + PAGE_SIZE < $num) {
                         ?>
                         <a style="text-decoration: none ; font-size: 50px ;font-weight: bold ;float: right"
-                           href="admin_message.php?start=<?php echo $start + PAGE_SIZE ?>">>></a>
+                           href="admin_connection.php?start=<?php echo $start + PAGE_SIZE ?>">>></a>
                         <?php
                     }
                     ?>
@@ -184,7 +184,7 @@
                             $k++;
                         for ($l = 1; $l <= $k; $l++) { ?>
                             <a style="text-decoration: none ; font-size: 20px;
-            " href="admin_message.php?start=<?php echo $start1 + ($l - 1) * PAGE_SIZE ?>"><?php echo $l ?>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            " href="admin_connection.php?start=<?php echo $start1 + ($l - 1) * PAGE_SIZE ?>"><?php echo $l ?>&nbsp;&nbsp;&nbsp;&nbsp;</a>
                             <?php
                         }
                         if (!$con)

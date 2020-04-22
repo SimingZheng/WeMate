@@ -113,7 +113,7 @@ $array = array();
 <?php
 } else {
     ?>
-    <a class="sign_in" href="../html/signin.html">Sign in</a>
+    <a class="sign_in" href="../html/login.html">Sign in</a>
     <?php
 }
 ?>

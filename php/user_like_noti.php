@@ -60,7 +60,7 @@ if ($start == 0) {
             <?php
         } else {
             ?>
-            <a class="sign_in" href="../html/index.html">Sign in</a>
+            <a class="sign_in" href="../html/login.html">Sign in</a>
             <?php
         }
         ?>
@@ -140,7 +140,7 @@ if ($start == 0) {
                             for(var i = keys.length; i--;)
                                 document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
                         }
-                        window.location.href= "../html/index.html";
+                        window.location.href= "../html/login.html";
                     }
                 </script>
             </a>
@@ -236,7 +236,7 @@ if ($start == 0) {
                 Please Sign in <br/></p>
             <p style=" text-align: center;margin-top: 120px"><input class="btn btn-large btn-blue btn-radius"
                                                                     type="button"
-                                                                    onclick=" window.location.href='../html/index.html' "
+                                                                    onclick=" window.location.href='../html/login.html' "
                                                                     value="Sign in"/></p>
             <?php
         } else {

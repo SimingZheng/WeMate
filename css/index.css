@@ -1,0 +1,257 @@
+*{
+	margin:0;padding:0;
+}
+body,button,input{
+	font:12px/1.5 'Microsoft YaHei';
+}
+ul,ol,dl{
+	list-style:none;/**去掉圆点**/
+}
+
+a{
+	text-decoration:none;/**去掉下线**/
+	outline:none;
+	color:#FFF;
+}
+a:visited{color:#FFF;}
+a:hover{color:#fff;}
+
+.clearfix:before,.clearfix:after{display:table;content:" ";}
+.clearfix:after{clear:both;}
+.clear{clear:both;}
+/*内部float了 遮盖住内容 需要clear*/
+
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+
+/****************************************上方不滚动************************************************/
+#dhl{
+	width: 100%;
+	overflow: hidden;
+	position:fixed;/**不滚动**/
+	left:0;
+	top:0;
+	z-index: 9999999;/**设置优先级 否则被图片盖住**/
+	min-height: 50px;
+	background: linear-gradient(to left, #FF6347, lightsalmon);
+
+}
+#dhl dl.navbox{
+	width: 90%; 
+	height:73%; 
+	margin: 0 auto; 
+	margin-top: .5%;
+}
+#dhl dl.navbox img{    
+	width: 5.5%;
+    float: left;
+    margin-top: -1%;
+}
+#dhl dl.navbox p{
+	float: left;
+	color:#fff;   
+	font-size: 1.8em;
+    margin-left: .5%;
+    margin-top: .3%;
+}
+
+#dhl dl.navbox dd{
+	float:right;
+	height:90%; 
+	width: 4%;
+	box-sizing: border-box;
+}
+#dhl dl.navbox dd.fone{
+	text-align: center;
+	line-height: 3;/**框高**/
+	border: 1px solid rgba(255, 255, 255, 0.8);
+}
+#dhl dl.navbox dd.fone a{
+	width: 100%;
+	height: 100%;
+	display:block;
+	background-color: rgba(0,0,0,0); 
+}
+#dhl dl.navbox dd.fone a:hover{
+	background-color: #fff; 
+	color: #000;
+}
+#dhl dl.navbox dd.ftwo{
+	margin-right: 1%; /**间隔**/
+	text-align: center;
+	line-height: 3;
+}
+#dhl dl.navbox dd.ftwo a{
+	width: 100%;
+	height: 100%;
+	display:block;
+	background: #FF6347;
+	color: #fff;
+}
+#dhl dl.navbox dd.ftwo a:hover{
+	background-color: rgba(255,0,0,1);
+}
+
+/****************************************图片************************************************/
+#gg {
+	background:url(../assets/image_index/center.png)  no-repeat center center;
+    background-size:cover;
+    background-attachment:fixed;
+	margin-top: 0%;
+    padding: 0%;
+} 
+
+/****************************************文字************************************************/
+#introduce{
+	width:100%;
+	margin:0 auto;
+	max-width: 1200px;
+	border: 1px solid #E7E7E7;  
+	margin-top: 16px;
+	box-shadow: 0px 0px 7px #AA465A;/**框阴影**/
+}
+#introduce h2{
+	width: 86%;
+	padding: 5px 0;
+	margin:0 auto;  
+}
+#introduce h4{
+	width: 86%;
+	padding: 5px 0;
+	margin:0 auto;  
+}
+#listbox{
+	width:100%; 
+	background-color: #fff; 
+	margin-top: 7%;  
+	position: relative; 
+}
+#listbox ul{ 
+	margin: 0px; 
+	padding: 0px;
+}
+
+#xc{
+	width: 100%;
+	height:160px;
+	background: linear-gradient(to left, #FF6347, lightsalmon);
+	padding-top: 20px;
+}
+
+#liubai{
+	width: 100%;
+	height:50px; 
+	color:#fff;  
+}
+
+/****************************************右下角图标************************************************/
+.zhiding{ 
+	width: 34px; 
+	height: 34px; 
+	position: fixed; 
+	bottom: 30px; 
+	right: 30px;
+}
+.jw{
+	color: #FFFFFF;
+	text-align: center;
+}
+.wei{
+	font-size: 18px;
+}
+
+#loginBox{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#loginBox .bg{
+	width: 100%;
+	height: 100%;
+	background: url(../assets/image_index/login.jpg) no-repeat center center;
+	position:fixed;
+	background-size:cover;
+	background-attachment:fixed;
+	margin-top: 0%;
+	padding: 0%;
+}
+#loginBox .wt{
+	width:300px;
+	height:400px;
+	position: absolute;
+	left: 60%;
+	top: 21%;
+}
+#loginBox .wt .username{
+	width: 100%;
+	height:auto;
+	border-bottom:1px solid #bdbdbd;
+}
+#loginBox .wt .username img{
+	width: 19%;
+	float: left;
+}
+#loginBox .wt .username input{
+	border: 0;
+	font-size: 16px;
+	margin-top: 17px;
+	outline: none;
+	width: 77%;
+	background:#C7B0C3;
+	border-radius: 30px;
+}
+#loginBox .wt .aniu{
+	width: 100%;
+	height:auto;
+	margin-top: 20px;
+}
+#loginBox .wt .aniu button{
+	width: 81%;
+	height: 45px;
+	margin: 0 auto;
+	background:#875F93;
+	border: 1px solid #9A6CAB;
+	border-radius: 30px;/**圆角边框**/
+	font-size: 23px;
+	letter-spacing: 3px;
+	color: #c9c9c9;
+	text-align: center;
+	line-height: 2;
+}
+
+.input3 {
+	width: 90%;
+	margin-top: 10%;
+	height: 40px;
+	border-width: 0px;
+	border-radius: 30px;
+	background: #EEAD0E;
+	cursor: pointer;
+	outline: none;
+	font-family: Microsoft YaHei;
+	color: white;
+	font-size: 17px;
+}
+
+.input3:hover {
+	background:#EEEE00 ;
+}
+.a1 {
+	text-align: center;
+	padding-top: 20px;
+	font-size: 1.4em;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+

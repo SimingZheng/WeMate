@@ -53,11 +53,11 @@
             ?>
             <p class="welcome">Welcome</p>
             <p class="name"><?php echo $_COOKIE['firstname'] ?></p>
-            <a class="sign_out" onclick="Delete()" href="../html/index.html">Sign out</a>
+            <a class="sign_out" onclick="Delete()" href="../html/login.html">Sign out</a>
             <?php
         } else {
             ?>
-            <a class="a1" href="../html/index.html">Sign in</a>
+            <a class="a1" href="../html/login.html">Sign in</a>
             <?php
         }
         ?>
@@ -78,7 +78,7 @@
                 Please Sign in <br/></p>
             <p style=" text-align: center;margin-top: 120px"><input class="btn btn-large btn-blue btn-radius"
                                                                     type="button"
-                                                                    onclick=" window.location.href='../html/index.html' "
+                                                                    onclick=" window.location.href='../html/login.html' "
                                                                     value="Sign in"/></p>
             <?php
         } else {

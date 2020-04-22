@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+<style type="text/css">
+@import url("../css/index.css");
+</style>
+<link href="../css/index.css" rel="stylesheet" type="text/css">
+</head>
+
+	
+<body >
+	
+	<div id="loginBox">
+		<div class="bg"></div>
+		
+		<div class="wt"  style="top: 12%;">
+			<br><br><br><br><br><br>
+			<form name="signin" action="../php/signin.php" method="post">
+				<div class="username clearfix">
+					<img src="../assets/image_index/ming.png"  />
+					<input type="email" required
+						   style="text-align:center; font-size: 20px" type=text name="email" id="myemail" maxlength="50"  placeholder="email"
+						   onkeyup="this.value=this.value.replace(/\s+/g,'')">
+				</div>
+				<div class="username clearfix">
+					<img src="../assets/image_index/mm.png"  />
+					<input style="text-align:center; font-size: 20px"  type=password name="password" maxlength="30"  id="mypassword" placeholder="password"
+						   onkeyup="this.value=this.value.replace(/\s+/g,'')">
+				</div>
+
+				<div class="aniu">
+					<input type="submit" class="input3" name="submit" id="submit" value="Sign in">
+
+					<div class="a1"><a href="index.html">Go Back</a></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+	
+ 
+
+</html>

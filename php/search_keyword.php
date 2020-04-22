@@ -29,7 +29,7 @@ if (isset($_GET["start"]) and $_GET["start"] >= 0 and $_GET["start"] <= 1000) {
 $end = $start + PAGE_SIZE - 1;
 if (!isset($_POST['submit'])&&$_COOKIE['gender']=="E") {
     $sql_interest = "SELECT DISTINCT user_ID FROM interests JOIN interest_type ON interests.interest_ID = interest_type.interest_ID
-                    WHERE instr(interest,'$value') >0";
+                    WHERE instr(interest,'$value') >0 AND user_ID IN (SELECT user_ID FROM profile)";
 }
 else if(isset($_POST['submit'])){
     $leftNum = $_COOKIE['leftNum'];
@@ -38,7 +38,7 @@ else if(isset($_POST['submit'])){
     setcookie('gender',$gender);
     $sql_interest = "SELECT DISTINCT user_ID FROM profile WHERE gender='$gender' AND age between '$leftNum' and '$rightNum' AND user_ID IN 
                     (SELECT DISTINCT user_ID FROM interests JOIN interest_type ON interests.interest_ID = interest_type.interest_ID
-                    WHERE instr(interest,'$value') >0)";
+                    WHERE instr(interest,'$value') >0) AND user_ID IN (SELECT user_ID FROM profile)";
 }
 else{
     $leftNum = $_COOKIE['leftNum'];
@@ -46,7 +46,7 @@ else{
     $gender = $_COOKIE['gender'];
     $sql_interest = "SELECT DISTINCT user_ID FROM profile WHERE gender='$gender' AND age between '$leftNum' and '$rightNum' AND user_ID IN 
                     (SELECT DISTINCT user_ID FROM interests JOIN interest_type ON interests.interest_ID = interest_type.interest_ID
-                    WHERE instr(interest,'$value') >0)";
+                    WHERE instr(interest,'$value') >0) AND user_ID IN (SELECT user_ID FROM profile)";
 }
 
 $result_interest = mysqli_query($con, $sql_interest);
@@ -158,7 +158,7 @@ if ($start == 0) {
                             for(var i = keys.length; i--;)
                                 document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
                         }
-                        window.location.href= "../html/index.html";
+                        window.location.href= "../html/login.html";
                     }
                 </script>
             </a>
@@ -328,7 +328,7 @@ if ($start == 0) {
                 Please Sign in <br/></p>
             <p style=" text-align: center;margin-top: 120px"><input class="btn btn-large btn-blue btn-radius"
                                                                     type="button"
-                                                                    onclick=" window.location.href='../html/index.html' "
+                                                                    onclick=" window.location.href='../html/login.html' "
                                                                     value="Sign in"/></p>
             <?php
         } else {
